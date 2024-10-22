@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .search-bar, .filter-bar {
+            margin-bottom: 20px;
+        }
+        .filter-bar select, .search-bar input {
+            padding: 10px;
+            width: calc(100% - 20px);
+            margin-bottom: 10px;
+        }
+        .applicant-list {
+            list-style: none;
+            padding: 0;
+        }
+        .applicant-card {
+            padding: 15px;
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .action-buttons button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .action-buttons button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Recruiter Dashboard</h2>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search Applicants">
+    </div>
+    <div class="filter-bar">
+        <select>
+            <option value="">Filter by Job Title</option>
+            <option value="software-engineer">Software Engineer</option>
+            <option value="data-analyst">Data Analyst</option>
+        </select>
+        <select>
+            <option value="">Filter by Experience</option>
+            <option value="0-2">0-2 Years</option>
+            <option value="3-5">3-5 Years</option>
+            <option value="5+">5+ Years</option>
+        </select>
+    </div>
+
+    <ul class="applicant-list">
+        <li onclick="applicantdetail()" class="applicant-card">
+            <div>
+                <h4>John Doe</h4>
+                <p>Job Title: Software Engineer | Experience: 3 Years</p>
+            </div>
+            <div class="action-buttons">
+                <button>Shortlist</button>
+                <button>Reject</button>
+            </div>
+        </li>
+        <li onclick="applicantdetail()" class="applicant-card">
+            <div>
+                <h4>Jane Smith</h4>
+                <p>Job Title: Data Analyst | Experience: 5 Years</p>
+            </div>
+            <div class="action-buttons">
+                <button>Shortlist</button>
+                <button>Reject</button>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    function applicantdetail(){
+        window.location.href='applicant-details.html'
+    }
+</script>
+</html>

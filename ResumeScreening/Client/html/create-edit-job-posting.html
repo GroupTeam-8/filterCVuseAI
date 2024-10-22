@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create/Edit Job Posting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea, select, input[type="date"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        textarea {
+            height: 100px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .button.cancel {
+            background-color: #dc3545;
+        }
+        .button.cancel:hover {
+            background-color: #c82333;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Create/Edit Job Posting</h2>
+    <form>
+        <div class="form-group">
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" placeholder="Enter job title">
+        </div>
+
+        <div class="form-group">
+            <label for="job-description">Job Description:</label>
+            <textarea id="job-description" placeholder="Enter job description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="required-skills">Required Skills:</label>
+            <input type="text" id="required-skills" placeholder="Enter required skills">
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Experience (Years):</label>
+            <input type="text" id="experience" placeholder="Enter required experience in years">
+        </div>
+
+        <div class="form-group">
+            <label for="salary-range">Salary Range:</label>
+            <input type="text" id="salary-range" placeholder="Enter salary range">
+        </div>
+
+        <div class="form-group">
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="date" id="expiry-date">
+        </div>
+
+        <div class="form-group">
+            <label for="job-type">Job Type:</label>
+            <select id="job-type">
+                <option value="full-time">Full-time</option>
+                <option value="part-time">Part-time</option>
+                <option value="internship">Internship</option>
+            </select>
+        </div>
+
+        <div class="button-container">
+            <button onclick="jobpostinglist(event)" class="button" type="submit">Save</button>
+            <button class="button cancel" type="button">Cancel</button>
+        </div>
+    </form>
+</div>
+</body>
+<script>
+    function jobpostinglist(event){
+        event.preventDefault();
+        window.location.href= 'job-posting-list.html';
+    }
+</script>
+</html>

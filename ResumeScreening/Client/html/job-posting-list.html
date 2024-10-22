@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Posting List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        .actions {
+            display: flex;
+            justify-content: space-around;
+        }
+        .search-bar, .filter-bar {
+            margin-bottom: 20px;
+        }
+        .filter-bar select, .search-bar input {
+            padding: 10px;
+            width: calc(100% - 20px);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h2>Job Posting List</h2>
+    <button onclick="createJobPosting()" class="button">Create New Job Posting</button>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search by Job Title">
+    </div>
+    <div class="filter-bar">
+        <select>
+            <option value="">Filter by Status</option>
+            <option value="active">Active</option>
+            <option value="expired">Expired</option>
+        </select>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Job Title</th>
+            <th>Posted Date</th>
+            <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Software Engineer</td>
+                <td>2024-09-01</td>
+                <td>Active</td>
+            <td class="actions">
+                <a onclick="createJobPosting()" href="#">Edit</a>
+                <a href="#">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Project Manager</td>
+            <td>2024-08-25</td>
+            <td>Expired</td>
+            <td class="actions">
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    function createJobPosting() {
+        // Kiểm tra thông tin đăng nhập
+        // Nếu thành công, chuyển đến trang danh sách bài đăng việc làm
+        window.location.href = 'create-edit-job-posting.html';
+    }
+
+
+</script>
+</body>
+</html>
