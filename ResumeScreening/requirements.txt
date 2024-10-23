@@ -1,0 +1,16 @@
+asgiref
+Django
+django-cors-headers
+django-environ
+djangorestframework
+djangorestframework-simplejwt
+PyJWT
+pytz
+sqlparse
+tzdata
+streamlit
+google-generativeai
+python-dotenv
+pdf2image
+PyPDF2
+spacy
